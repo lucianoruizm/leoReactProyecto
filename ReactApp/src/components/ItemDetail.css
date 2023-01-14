@@ -1,0 +1,17 @@
+.col {
+    max-width: 400px;
+    margin: 15px;
+    height: 80%;
+}
+
+.movieImage {
+    border-radius: 5px;
+}
+
+.movieDetails {
+    font-size: 1.5rem;
+}
+
+.fistItem {
+    margin-top: 0;
+}

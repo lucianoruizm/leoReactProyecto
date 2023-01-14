@@ -1,0 +1,16 @@
+.movieCard {
+    cursor: pointer;
+}
+.movieCard:hover {
+    opacity: 0.8;
+}
+
+h3{
+    color: black;
+}
+
+.movieImage {
+    width: 80%;
+    border-radius: 10px;
+    background-color: rgb(233, 231, 231);
+}
