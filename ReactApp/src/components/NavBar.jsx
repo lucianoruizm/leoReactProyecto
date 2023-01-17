@@ -1,6 +1,6 @@
 import './NavBar.css'
 import CartWidget from './CartWidget'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 // Se le importa el estilo desde NavBar.css.
 // NavBar contiene el nombre del proyecto, la lista de secciones y el componente CardWidget que fue importado.
@@ -16,13 +16,13 @@ const NavBar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink to={"/category/accion"} className="nav-link color-link">Acción</NavLink>
+                <Link to={"/category/" + 18} className="nav-link color-link">Acción</Link>
               </li>
               <li className="nav-item">
-                <NavLink to={"/category/terror"} className="nav-link color-link">Terror</NavLink>
+                <Link to={"/category/" + 28} className="nav-link color-link">Terror</Link>
               </li>
               <li className="nav-item">
-                <NavLink to={"/category/suspenso"} className="nav-link color-link">Suspenso</NavLink>
+                <Link to={"/category/" + 3} className="nav-link color-link">Suspenso</Link>
               </li>
             </ul>
           </div>

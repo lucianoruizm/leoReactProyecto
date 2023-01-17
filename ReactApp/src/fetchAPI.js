@@ -10,13 +10,3 @@ export async function getMovies(path) {
     });
     return await result.json();
 }
-
-export async function getGenres(genre) {
-    const result = await fetch(`https://api.themoviedb.org/3/${genre}/movie/list?api_key=${API_KEY}&language=en-US`, {
-        headers: {
-            Authorization: `Bearer ${API_KEY}`,
-            "Content-Type": "application/json;charset=utf-8",
-        },
-    });
-    return await result.json();
-}

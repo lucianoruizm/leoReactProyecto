@@ -9,6 +9,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import Category from './components/Category';
 
 // Se importan los componentes creados y se renderizan dentro del return de App.
 function App() {
@@ -27,7 +28,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
-          <Route path="/category/:categoryId" element={<ItemListContainer />} />
+          <Route path="/category/:categoryId" element={<Category />} />
           <Route path="/item/:itemId" element={<ItemDetailContainer />} />
         </Routes>
       </Router>

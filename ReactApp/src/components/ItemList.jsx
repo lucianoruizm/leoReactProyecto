@@ -19,7 +19,7 @@ export const ItemList = () => {
       : "/discover/movie";
       setIsLoading(true);
       getMovies(searchUrl).then(data => {
-          setMovies(data.results);
+          setTimeout(() => setMovies(data.results), 2000);
           setIsLoading(false);
         });
   }, [search]);

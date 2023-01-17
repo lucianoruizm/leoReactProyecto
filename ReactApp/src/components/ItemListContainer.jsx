@@ -1,5 +1,6 @@
 import { ItemList } from './ItemList';
 import './ItemListContainer.css'
+import { Search } from './Search';
 
 // Se le importa el estilo desde ItemListContainer.css.
 // Es importado para poder usarse en App.
@@ -8,6 +9,7 @@ const ItemListContainer = () => {
 
   return (
     <div className='item-list'> 
+      <Search />
       <h2>Listado de peliculas: </h2>
       <ItemList />
     </div>
