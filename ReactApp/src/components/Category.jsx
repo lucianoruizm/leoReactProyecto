@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getGenres } from "../getGenres";
+import { getMoviesGenre } from "../fetchAPI";
 import { Item } from "./Item";
 
 
@@ -8,11 +8,11 @@ const Category = () => {
 
   const [moviesGenre, setMoviesGenre] = useState([]);
   
-  const categoryId = useParams();
+  const { categoryId } = useParams();
   console.log(categoryId);
 
   useEffect(() => {
-      getGenres(categoryId).then(data => {
+      getMoviesGenre(categoryId).then(data => {
         setMoviesGenre(data.results);
         });
   }, [categoryId]);

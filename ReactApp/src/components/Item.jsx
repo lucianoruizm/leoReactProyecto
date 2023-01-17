@@ -6,6 +6,7 @@ import "./Item.css"
 // en este caso lo envia a detalles del item.
 
 export const Item = ({ id, title, poster_path }) => {
+
   const imageUrl = "http://image.tmdb.org/t/p/w300" + poster_path;
   return (
     <div key={id} className='movieCard' >

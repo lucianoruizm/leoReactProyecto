@@ -7,9 +7,10 @@ import './ItemDetailContainer.css';
 
 const ItemDetailContainer = () => {
 
-  const { itemId} = useParams();
+  const { itemId } = useParams();
   const [isLoading, setIsLoading] = useState(true);
   const [movie, setMovie] = useState(null);
+  console.log(typeof(itemId));
 
   useEffect(() => {
     setIsLoading(true);

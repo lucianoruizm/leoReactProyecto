@@ -5,3 +5,9 @@
     padding: 40px;
     justify-content: center;
 }
+
+@media (max-width: 500px) {
+    .moviesGrid {
+        padding: 40px 0;
+    }
+}

@@ -14,3 +14,17 @@ h3{
     border-radius: 10px;
     background-color: rgb(233, 231, 231);
 }
+
+@media (max-width: 500px) {
+    .movieCard {
+        display: flex;
+        align-items: baseline;
+        gap: 15px;
+    }
+    .movieImage {
+        width: 150px;
+    }
+    h3 {
+        font-size: 12px;
+    }
+}

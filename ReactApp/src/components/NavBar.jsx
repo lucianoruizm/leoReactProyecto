@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 // NavBar contiene el nombre del proyecto, la lista de secciones y el componente CardWidget que fue importado.
 // Se importa para que pueda usarse en App. 
 const NavBar = () => {
+
     return (
       <nav className="navbar navbar-expand-lg bg-primary navbar-container">
         <div className="container-fluid">
@@ -16,13 +17,22 @@ const NavBar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link to={"/category/" + 18} className="nav-link color-link">Acción</Link>
+                <Link to={"/category/" + 28} className="nav-link color-link">Acción</Link>
               </li>
               <li className="nav-item">
-                <Link to={"/category/" + 28} className="nav-link color-link">Terror</Link>
+                <Link to={"/category/" + 27} className="nav-link color-link">Terror</Link>
               </li>
               <li className="nav-item">
-                <Link to={"/category/" + 3} className="nav-link color-link">Suspenso</Link>
+                <Link to={"/category/" + 18} className="nav-link color-link">Drama</Link>
+              </li>
+              <li className="nav-item">
+                <Link to={"/category/" + 12} className="nav-link color-link">Aventura</Link>
+              </li>
+              <li className="nav-item">
+                <Link to={"/category/" + 35} className="nav-link color-link">Comedia</Link>
+              </li>
+              <li className="nav-item">
+                <Link to={"/category/" + 878} className="nav-link color-link">Ciencia Ficción</Link>
               </li>
             </ul>
           </div>

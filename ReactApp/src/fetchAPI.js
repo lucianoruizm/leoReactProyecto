@@ -10,3 +10,13 @@ export async function getMovies(path) {
     });
     return await result.json();
 }
+
+export async function getMoviesGenre(genre_id) {
+    const result = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=${genre_id}`, {
+        headers: {
+            Authorization: `Bearer ${API_KEY}`,
+            "Content-Type": "application/json;charset=utf-8",
+        },
+    });
+    return await result.json();
+}

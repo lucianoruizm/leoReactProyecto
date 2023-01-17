@@ -1,11 +1,11 @@
 .spinner {
     display: flex;
     justify-content: center;
-    color: white;
+    color: var(--color1);
 }
 
 .spinning {
-    animation: spinner 1s linear infinite;
+    animation: spinner .5s linear 1s infinite alternate slidein;
 }
 
 @keyframes spinner {
