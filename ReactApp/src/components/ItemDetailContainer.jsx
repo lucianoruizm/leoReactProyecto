@@ -1,16 +1,21 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getMovies } from "../fetchAPI";
 import { ItemDetail } from "./ItemDetail";
 import { Spinner } from "./Spinner";
 import './ItemDetailContainer.css';
+import { CartContext } from "../context/CartContextProvider";
 
 const ItemDetailContainer = () => {
+
+  const {
+    addProduct,
+    setAddProduct,
+  } = useContext(CartContext);
 
   const { itemId } = useParams();
   const [isLoading, setIsLoading] = useState(true);
   const [movie, setMovie] = useState(null);
-  console.log(typeof(itemId));
 
   useEffect(() => {
     setIsLoading(true);
@@ -26,7 +31,7 @@ const ItemDetailContainer = () => {
 
   return ( 
     <div className="detailsContainer">
-      <ItemDetail movie={movie} />
+      <ItemDetail movie={movie} addProduct={addProduct} setAddProduct={setAddProduct} />
     </div>
     
   )

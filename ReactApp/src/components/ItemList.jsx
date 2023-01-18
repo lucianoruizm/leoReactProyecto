@@ -1,11 +1,17 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import { CartContext } from "../context/CartContextProvider";
 import { getMovies } from "../fetchAPI";
 import { Item } from "./Item";
 import './ItemList.css';
 import { Spinner } from "./Spinner";
 
 export const ItemList = () => {
+
+  const {
+    addProduct,
+    setAddProduct,
+  } = useContext(CartContext);
 
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -33,7 +39,7 @@ export const ItemList = () => {
         {movies.map((movie)=>{ 
         let {id, title, poster_path} = movie;
         return(
-            <Item key={id} id={id} title={title} poster_path={poster_path} />
+            <Item key={id} id={id} title={title} poster_path={poster_path} addProduct={addProduct} setAddProduct={setAddProduct} />
         )
         })}
     </div>
