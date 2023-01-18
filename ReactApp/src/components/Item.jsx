@@ -13,7 +13,7 @@ export const Item = ({ id, title, poster_path }) => {
       <Link to={"/item/" + id}>
         <img src={imageUrl} alt={title} className='movieImage' />
       </Link>
-      <h3>{title}</h3>
+      <button className="addToCartBtn">Agregar a Cart</button>
     </div>
   )
 }

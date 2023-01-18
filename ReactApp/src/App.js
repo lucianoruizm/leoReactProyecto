@@ -24,12 +24,10 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
+      <Router element={<CartContextProvider />}>
         <NavBar />
         <Routes>
-          <Route element={<CartContextProvider />}>
             <Route path="/" element={<ItemListContainer />} />
-          </Route>
             <Route path="/category/:categoryId" element={<Category />} />
             <Route path="/item/:itemId" element={<ItemDetailContainer />} />
         </Routes>

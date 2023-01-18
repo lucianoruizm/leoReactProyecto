@@ -1,18 +1,32 @@
 .movieCard {
-    cursor: pointer;
-}
-.movieCard:hover {
-    opacity: 0.8;
-}
-
-h3{
-    color: black;
+    margin-bottom: 50px;
 }
 
 .movieImage {
     width: 80%;
     border-radius: 10px;
     background-color: rgb(233, 231, 231);
+}
+
+.movieImage:hover {
+    opacity: 0.8;
+}
+
+.addToCartBtn {
+    width: 78%;
+    background-color: var(--color1);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px 2px 4px;
+    cursor: pointer;
+}
+
+.addToCartBtn:hover {
+    opacity: 0.8;
 }
 
 @media (max-width: 500px) {
@@ -26,5 +40,9 @@ h3{
     }
     h3 {
         font-size: 12px;
+    }
+    .addToCartBtn {
+        padding: 5px;
+        font-size: 10px;
     }
 }
