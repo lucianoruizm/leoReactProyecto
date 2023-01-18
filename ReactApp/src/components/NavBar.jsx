@@ -1,9 +1,6 @@
 import './NavBar.css'
 import { Link } from 'react-router-dom'
 
-// Se le importa el estilo desde NavBar.css.
-// NavBar contiene el nombre del proyecto, la lista de secciones y el componente CardWidget que fue importado.
-// Se importa para que pueda usarse en App. 
 const NavBar = () => {
 
     return (

@@ -4,3 +4,31 @@
     flex-wrap: wrap;
     margin-top: 50px;
 }
+
+.btnDetail {
+    width: 78%;
+    background-color: var(--color1);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px 2px 4px;
+    cursor: pointer;
+}
+
+.btnDetail:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 778px) {
+    .detailsContainer {
+        flex-direction: column;
+        align-items: center;
+        margin: 50px auto;
+    }
+    .btnDetail {
+        padding: 10px;
+    }
+}

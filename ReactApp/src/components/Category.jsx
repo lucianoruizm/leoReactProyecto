@@ -4,6 +4,8 @@ import { CartContext } from "../context/CartContextProvider";
 import { getMoviesGenre } from "../fetchAPI";
 import CartWidget from "./CartWidget";
 import { Item } from "./Item";
+import './Category.css';
+import { Spinner } from "./Spinner";
 
 
 const Category = () => {
@@ -13,26 +15,33 @@ const Category = () => {
     setAddProduct,
   } = useContext(CartContext);
 
+  const [isLoading, setIsLoading] = useState(true);
   const [moviesGenre, setMoviesGenre] = useState([]);
   
   const { categoryId } = useParams();
-  console.log(categoryId);
 
   useEffect(() => {
       getMoviesGenre(categoryId).then(data => {
         setMoviesGenre(data.results);
+        setIsLoading(false);
         });
   }, [categoryId]);
 
+  if (isLoading) {
+    return <Spinner />
+  }
+
   return (
-    <div className="moviesGrid">
-      <CartWidget addProduct={addProduct} /> 
-        {moviesGenre.map((movie)=>{
-            let {id, title, poster_path} = movie;
-            return(
-                <Item key={id} id={id} title={title} poster_path={poster_path} addProduct={addProduct} setAddProduct={setAddProduct} />
-            )
-            })}
+    <div className='item-list'>
+      <CartWidget addProduct={addProduct} />
+      <div className="moviesGrid">
+          {moviesGenre.map((movie)=>{
+              let {id, title, poster_path} = movie;
+              return(
+                  <Item key={id} id={id} title={title} poster_path={poster_path} addProduct={addProduct} setAddProduct={setAddProduct} />
+              )
+              })}
+      </div>
     </div>
   )
 }

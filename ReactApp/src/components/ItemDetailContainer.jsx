@@ -18,7 +18,6 @@ const ItemDetailContainer = () => {
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
-    setIsLoading(true);
     getMovies("/movie/" + itemId).then(data => {
       setMovie(data);
       setIsLoading(false);

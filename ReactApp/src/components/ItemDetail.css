@@ -9,10 +9,16 @@
 }
 
 .movieDetails {
-    font-size: 1.5rem;
+    font-size: 20px;
 }
 
 .titleDetail {
-    font-size: 50px;
+    font-size: 30px;
     margin-bottom: 20px;
+}
+
+@media (max-width: 778px) {
+    .movieDetails {
+        font-size: 15px;
+    }
 }
