@@ -1,5 +1,4 @@
 import './NavBar.css'
-import CartWidget from './CartWidget'
 import { Link } from 'react-router-dom'
 
 // Se le importa el estilo desde NavBar.css.
@@ -37,7 +36,6 @@ const NavBar = () => {
             </ul>
           </div>
         </div>
-        <CartWidget />
       </nav>
   )
 }
